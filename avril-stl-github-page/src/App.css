@@ -2,6 +2,28 @@
   text-align: center;
 }
 
+.banner{
+  background-color: #b0abe0;  /* background color */
+               /* text color */
+  text-align: center;         /* Center align text */
+  padding: 0.1px 0;         /* Vertical padding */
+  width: 100%;                /* Make the banner full width */
+  position: relative; 
+}
+
+.fancy-text {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  
+  /* Fallback for non-supporting browsers */
+  color: #9198e5; 
+  font-size: 20px;
+    
+  /* Linear gradient for supporting browsers */
+  background: linear-gradient(#876ad0, #6ea1ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
