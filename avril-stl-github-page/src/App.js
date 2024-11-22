@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import RollingSongBanner from './RollingSongBanner'
 
 function App() {
   return (
     <div className="App">
 
-        <div className= "banner">
-            <div className = "fancy-text">
-              <h1>  Currently Listening To </h1>
-            </div>
-        </div>
+
+      <RollingSongBanner />
       
       <header className="App-header">
-
+        <div className = "title-text">
+          <h1>  Hello, Hero.  </h1>
+        </div>
       
 
-        
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      
         <a
           className="App-link"
           href="https://reactjs.org"

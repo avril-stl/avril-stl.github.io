@@ -1,0 +1,65 @@
+/* src/components/RollingBanner.css */
+.banner{
+    background-color: #0a1835; /* #9dadcf;  /* background color */
+                 /* text color */
+    text-align: center;         /* Center align text */
+    padding: 5px;         /* Vertical padding */
+    width: 100%;                /* Make the banner full width */
+    position: relative; 
+
+}
+.banner-content {
+    display: flex;              /* Align text items in a row */
+    width: 100%;                /* Double the width of the container to hold two copies */
+    animation: marquee 10s linear infinite; /* Animate the container */
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+ 
+
+.song-banner-text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: linear-gradient(90deg, #de795d, #b796e5, rgb(108, 183, 223), rgb(165, 229, 110));
+    background-size: 300% 300%;
+    background-clip: text;
+    color: transparent;
+    font-size: 25px;
+    margin: 0;  /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    animation: marquee 5s linear infinite; /* Scroll the text horizontally */
+    display: flex;  /* Allow the text to scroll horizontally */
+    white-space: nowrap;    /* Prevent text from wrapping to the next line */
+    text-align: center; 
+    animation: gradientAnimation 8s ease infinite;
+}
+
+.center {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    width: 100%; 
+}
+
+.song-banner-text-2 {
+    animation-delay: 2.5s;
+}
+
+/* Keyframes to create the scrolling effect */
+/* @keyframes marquee {
+
+
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+} */
+  

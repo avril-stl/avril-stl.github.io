@@ -1,44 +1,46 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function listeningTo() {
+const ListeningTo = () => {
   const [track, setTrack] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch currently playing track
+  const fetchListeningTo = async () => {
+    try {
+      const response = await axios.get('/api/currently-playing'); // This will point to the Vercel API route
+      setTrack(response.data);
+    } catch (err) {
+      setError('Failed to fetch currently playing track');
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
-    const accessToken = 'YOUR_SPOTIFY_ACCESS_TOKEN'; // Replace this with your Spotify access token
-    if (accessToken) {
-      fetchCurrentTrack(accessToken);
-    }
+    // Call the API when the component mounts
+    fetchListeningTo();
   }, []);
 
-  async function fetchCurrentTrack(accessToken) {
-    const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
-      headers: {
-        'Authorization': 'Bearer ' + accessToken,
-      },
-    });
-    const data = await response.json();
-    setTrack(data.item);
-    setLoading(false);
+  if (error) {
+    return <div>{error}</div>;
   }
 
-  if (loading) {
+  if (!track) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <h2>Now Playing:</h2>
-      {track ? (
-        <div>
-          <img src={track.album.images[0].url} alt={track.name} width="100" />
-          <p>{track.name} by {track.artists[0].name}</p>
-        </div>
-      ) : (
-        <p>No track playing.</p>
-      )}
+      <h2>Currently Playing</h2>
+      <p>Track: {track.item.name}</p>
+      <p>Artist: {track.item.artists.map(artist => artist.name).join(', ')}</p>
+      <p>Album: {track.item.album.name}</p>
+      <img src={track.item.album.images[0].url} alt="Album Art" width="100" />
     </div>
   );
-}
+};
 
-export default listeningTo;
+export default ListeningTo;
+
+
+

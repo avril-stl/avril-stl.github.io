@@ -2,26 +2,51 @@
   text-align: center;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;  /* Ensure the full height is used */
+}
+
 .banner{
-  background-color: #b0abe0;  /* background color */
+  background-color: #9dadcf;  /* background color */
                /* text color */
   text-align: center;         /* Center align text */
-  padding: 0.1px 0;         /* Vertical padding */
+  padding: 5px;         /* Vertical padding */
   width: 100%;                /* Make the banner full width */
   position: relative; 
 }
 
-.fancy-text {
+.song-banner-text {
   font-family: "Helvetica Neue", Helvetica, Arial;
-  
   /* Fallback for non-supporting browsers */
-  color: #9198e5; 
-  font-size: 20px;
-    
-  /* Linear gradient for supporting browsers */
-  background: linear-gradient(#876ad0, #6ea1ca);
+  color: #5d6d8e; 
+  font-size: 12px;  
+  /* background: linear-gradient(#746e82, #728a9d);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+}
+.song-banner-text h1 {
+  margin: 0;                  /* Remove default margin on h1 */
+  padding: 0;                 /* Remove default padding on h1 */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.title-text {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  color: #0a1835;
+  font-size: 40px; 
 }
 
 .App-logo {
@@ -36,7 +61,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #cbd6ee;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -47,7 +72,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #6c7b9a;
 }
 
 @keyframes App-logo-spin {
