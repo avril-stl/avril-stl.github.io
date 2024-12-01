@@ -12,7 +12,7 @@ const RollingSongBanner = () => {
 
   // Function to fetch recent tracks from Last.fm API
   const getRecentTracks = async (user, apiKey, limit = 1) => {
-    const url = "http://ws.audioscrobbler.com/2.0/";
+    const url = "https://ws.audioscrobbler.com/2.0/";
     const params = new URLSearchParams({
       method: 'user.getRecentTracks',
       user: user,
