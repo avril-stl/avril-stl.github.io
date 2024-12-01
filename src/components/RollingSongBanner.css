@@ -1,6 +1,6 @@
 /* src/components/RollingBanner.css */
 .banner{
-    background-color: #dfedee; /* #9dadcf;  /* background color */
+    background-color: #a9eef5; /* #9dadcf;  /* background color */
                  /* text color */
     text-align: center;         /* Center align text */
     padding: 5px;         /* Vertical padding */
@@ -11,7 +11,6 @@
 .banner-content {
     display: flex;              /* Align text items in a row */
     width: 100%;                /* Double the width of the container to hold two copies */
-    animation: marquee 10s linear infinite; /* Animate the container */
 }
 
 
@@ -30,16 +29,17 @@
 
 .song-banner-text {
     font-family: 'Pixelify Sans', sans-serif;
-    background: linear-gradient(90deg, #de795d, #b796e5, rgb(108, 183, 223), rgb(165, 229, 110));
+    background: linear-gradient(90deg, #dd5833, #8b59d2, rgb(100, 187, 234), rgb(128, 201, 63));
     background-size: 300% 300%;
     background-clip: text;
     color: transparent;
     font-size: 30px;
     margin: 0;  /* Remove default margins */
     padding: 0; /* Remove default padding */
-    animation: marquee 5s linear infinite; /* Scroll the text horizontally */
     display: flex;  /* Allow the text to scroll horizontally */
-    white-space: nowrap;    /* Prevent text from wrapping to the next line */
+    white-space: normal;    /* Prevent text from wrapping to the next line */
+    word-wrap: break-word;
+    word-break: break-word;
     text-align: center; 
     animation: gradientAnimation 8s ease infinite;
 }
@@ -70,3 +70,21 @@
     100% { transform: translate(-100%, 0); }
 } */
   
+@media (max-width: 767px) { /*for mobile devices*/
+  
+    .banner {
+       padding: 5px 0px;
+       margin: 0;
+       width: 100%;
+       overflow-x: hidden;         
+    }
+
+    .banner-content {
+       width: 100%;              
+    }
+
+    .song-banner-text {
+       font-size: 24px;       
+    }
+  
+  }

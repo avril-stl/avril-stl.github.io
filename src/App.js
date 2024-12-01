@@ -40,7 +40,7 @@ const App = () => {
           <h1>Hello, Hero.</h1>
         </div>
       
-        <img src={pixel_princess} className="App-logo" alt="logo" />
+        {/* <img src={pixel_princess} className="App-logo" alt="logo" /> */}
       </header>
     </div>
 
