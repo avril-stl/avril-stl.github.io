@@ -29,13 +29,26 @@ body, html {
   background-size: 200% 200%;
   background-clip: text;
   color: transparent;
-  font-size: 60px;
+  font-size: 70px;
   margin: 0;  /* Remove default margins */
   padding: 0; /* Remove default padding */
   display: flex;  /* Allow the text to scroll horizontally */
-  white-space: nowrap;    /* Prevent text from wrapping to the next line */
+  white-space: normal;    /* Prevent text from wrapping to the next line */
   text-align: center; 
   animation: gradientAnimation 5s ease infinite;
+}
+
+.subtitle-text {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #c7a8f1;
+  font-size: 30px;
+  margin: 0;  /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  display: flex;  /* Allow the text to scroll horizontally */
+  white-space: normal;    /* Prevent text from wrapping to the next line */
+  text-align: center; 
+  cursor: pointer;
+  font-weight: lighter;
 }
 
 
@@ -59,12 +72,17 @@ body, html {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 
 .App-link {
   color: #6c7b9a;
 }
 
+.App-logo {
+  margin: 0;  /* Ensure no margin on logo */
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -84,7 +102,7 @@ body, html {
   }
 
   .title-text {
-    font-size: 40px;  /* Adjust font size for mobile */
+    font-size: 50px;  /* Adjust font size for mobile */
   }
 
 }

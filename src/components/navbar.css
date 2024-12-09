@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    top: 0;
+    left: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+  }
+  
+  /* Hamburger Button */
+  .nav-btn {
+    font-size: 30px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    color: #4694aa;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .nav-btn:hover {
+    color: rgb(233, 14, 171); /* Pink hover effect */
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden off-screen */
+    width: 97%;
+    height: 100%; /*100vh;*/
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: transform 0.3s, box-shadow ease; /* Smooth sliding effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    z-index: 999; /* Ensure it is above other content */
+    box-shadow: 10;
+  }
+  
+  /* When sidebar is open, slide it into view */
+  .sidebar.open {
+    transform: translateX(100%); /* Move sidebar into view */
+    box-shadow: 4px 0 600px rgba(0, 0, 0, 0.5);
+    
+  }
+  
+  /* Close button inside the sidebar */
+  .close-btn {
+    top:0px;
+    font-size: 30px;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+    color: #54b6c1;
+    cursor: pointer;
+    margin-bottom: 0px;
+    align-self: flex-end; /* Position the close button at the top right */
+  }
+  
+  .close-btn:hover {
+    color: rgb(233, 14, 171); /* Pink hover effect */
+  }
+  
+  /* Styling for navigation links */
+  .nav-link {
+    font-family: 'Menlo', sans-serif;
+    font-size: 25px;
+    color: #54b6c1; /* Pink color */
+    margin-bottom: 20px; /* Add space between links */
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .nav-text {
+    font-family: 'Menlo', sans-serif;
+    font-size: 25px;
+    color: #54b6c1; /* Pink color */
+    margin-bottom: 20px; /* Add space between links */
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .nav-text-title {
+    font-family: 'Menlo', sans-serif;
+    font-size: 20px;
+    color: #54b6c1; /* Pink color */
+    margin-bottom: 20px;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  

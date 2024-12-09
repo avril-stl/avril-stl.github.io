@@ -1,11 +1,11 @@
 /* src/components/RollingBanner.css */
 .banner{
-    background-color: #a9eef5; /* #9dadcf;  /* background color */
-                 /* text color */
-    text-align: center;         /* Center align text */
-    padding: 5px;         /* Vertical padding */
+    background-color: #bde4e8; 
+    text-align: center;         
+    padding: 5px;        
     width: 100%;                /* Make the banner full width */
     position: relative; 
+    z-index: 1;
 
 }
 .banner-content {
@@ -76,7 +76,9 @@
        padding: 5px 0px;
        margin: 0;
        width: 100%;
-       overflow-x: hidden;         
+       overflow-x: hidden;  
+       position: relative;  
+       z-index: 2;      
     }
 
     .banner-content {

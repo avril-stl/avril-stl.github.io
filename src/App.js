@@ -1,55 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import pixel_princess from './pixel_princess.png';
 import './App.css';
-import './sidebar.css';
 import RollingSongBanner from './components/RollingSongBanner';
-
+import Navbar from './components/navbar';
+import TerminalModal from './components/terminalModal'; // import TerminalModal
 
 const App = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className="App">
       <RollingSongBanner />
-
-      {/* <div className="sidebar"> 
-        
-        <div >
-          <a 
-            href= "https://www.linkedin.com/in/avril-studstill-86558222b/"
-            className="my-link"
-          >
-            ...Never Checks Her LinkedIn
-          </a>
-
-        </div>
-
-        <div >
-          <a 
-            href= "https://open.spotify.com/user/nerdycupquakes?si=cc27074ffe6241a3"
-            className="my-link"
-          >
-            ...Listens To Songs You've Never Heard Of
-          </a>
-
-        </div>
-
-      </div> */}
-      
+      <Navbar />
       <header className="App-header">
         <div className="title-text">
           <h1>Hello, Hero.</h1>
         </div>
-      
-        {/* <img src={pixel_princess} className="App-logo" alt="logo" /> */}
+        <div className="subtitle-text" onClick={openModal}>
+          <h1>[ Click ⭐ to Start ]</h1>
+        </div>
       </header>
+      <TerminalModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
-
-   
   );
 };
 
 export default App;
-
-
-
-

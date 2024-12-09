@@ -1,0 +1,136 @@
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-container {
+    background: rgb(0, 0, 0);
+    color: white;
+    width: 50%;
+    max-width: 1000px;
+    height: 70%;
+    min-height: 300px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    /* border: 10px solid rgb(130, 251, 9); */
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(0, 0, 0, 0.1), 4px 0 6px rgba(0, 0, 0, 0.1), -4px 0 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(77, 82, 85, 0.663);
+}
+
+/* White banner for the header */
+.terminal-header {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    padding: 15px;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid rgba(77, 82, 85, 0.663);
+}
+
+.close-button {
+    position: absolute;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.terminal-body {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1px 0px 5px 5px;
+}
+
+/* Terminal output area */
+.terminal-output {
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 30px;
+    margin-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.input-line,
+.output-line {
+    margin: 2px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.input-line {
+    color: #00ff00; /* Green for input command */
+}
+
+.output-line {
+    color: #f0f0f0; /* White for output */
+}
+
+/* Command input form */
+.command-form {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: row;
+}
+
+.command-line {
+    display: shrink;
+    align-items: center;
+}
+
+.terminal-prompt {
+    color: #00ff00; /* Green prompt */
+    margin-right: 0px; /* Space between prompt and input */
+    white-space: nowrap;
+}
+
+.command-input {
+    background: rgb(0, 0, 0);
+    color: rgb(0, 140, 255);
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+/* Ensure the text is displayed in a real terminal style */
+.App-header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-text {
+    position: absolute;
+    top: 4px;
+    font-family: 'Arial', Courier, monospace;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    color: rgb(97, 91, 91);
+    font-weight: bold;
+    z-index: 1; /* Ensure it's on top of any other header content */
+  }
