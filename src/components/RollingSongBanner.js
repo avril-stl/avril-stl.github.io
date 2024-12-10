@@ -115,7 +115,9 @@ const RollingSongBanner = () => {
 
         </div>
       </div>
+      <div className="banner_line">  </div> 
     </div>
+    
   );
 };
 

@@ -2,7 +2,7 @@
 .banner{
     background-color: #bde4e8; 
     text-align: center;         
-    padding: 5px;        
+    padding: 0px 0px 5px;        
     width: 100%;                /* Make the banner full width */
     position: relative; 
     z-index: 1;
@@ -25,11 +25,24 @@
       background-position: 0% 50%;
     }
 }
+
+.banner_line{
+    top: 8px;
+    left: 0px;
+    background: linear-gradient(90deg, #04baf6, #e314d2, rgb(0, 186, 253), rgb(128, 4, 252)); 
+    background-size: 100% 100%;       
+    padding: 3px 0px 0px 0px;        
+    width: 100%;                /* Make the banner full width */
+    position: relative; 
+    z-index: 1;
+    animation: gradientAnimation 8s ease infinite;
+
+}
  
 
 .song-banner-text {
     font-family: 'Pixelify Sans', sans-serif;
-    background: linear-gradient(90deg, #dd5833, #8b59d2, rgb(100, 187, 234), rgb(128, 201, 63));
+    background: linear-gradient(90deg, #04baf687, #e314d27f, rgba(0, 186, 253, 0.559), rgba(128, 4, 252, 0.575)); 
     background-size: 300% 300%;
     background-clip: text;
     color: transparent;
@@ -73,7 +86,6 @@
 @media (max-width: 767px) { /*for mobile devices*/
   
     .banner {
-       padding: 5px 0px;
        margin: 0;
        width: 100%;
        overflow-x: hidden;  

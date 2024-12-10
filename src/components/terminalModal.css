@@ -115,14 +115,6 @@
     min-width: 0;
 }
 
-/* Ensure the text is displayed in a real terminal style */
-.App-header {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-    margin-top: 20px;
-}
-
 .header-text {
     position: absolute;
     top: 4px;

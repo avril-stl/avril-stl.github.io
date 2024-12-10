@@ -5,7 +5,7 @@ export const conversationFlow = [
       options: {
         'help': {
           responses: [
-            "available commands: help, cd, ls, save_avril, clr",
+            "available commands: help, cd, ls, save_avril, clr, terminal-how-to",
           ],
           nextStage: 0,
         },
@@ -13,9 +13,9 @@ export const conversationFlow = [
           responses: [
             "What took you so long?!",
             "I need your help.",
-            "An evil wizard who shall not be named...",
-            "...but whose name happens to rhyme with my shmevil ex-shboyfriend shmjohn.",
-            "Trapped me inside this website :(...",
+            "An evil wizard trapped me inside this website :(",
+            "...yes I know that's cliche",
+            "But I can't get out D:",
             "Type c to continue or e to exit: ",
           ],
           nextStage: 1,
@@ -30,10 +30,31 @@ export const conversationFlow = [
         },
         'cd favorite_songs': {
           responses: [
-            'ZHJlYW0gYSBsaXR0bGUgZHJlYW0gb2YgbWU='
+            'ZHJlYW0gYSBsaXR0bGUgZHJlYW0gb2YgbWU=',
+            'TGEgUml0b3VybmVsbGUgYnkgU2ViYXN0aWVuIFRlbGxpZXIg',
+
           ],
           nextStage: 0,
         },
+        'cd old_photos': {
+          responses: [
+            'summer_2024.jpeg',
+            'halloween_2008.jpeg',
+            'spring_2004.jpeg'
+          ],
+          nextStage: 0,
+        },
+        'terminal-how-to': {
+          responses: [
+            'help -- lists all available commands',
+            'cd -- puts you in a new directory',
+            'ls -- lists all the items in a directory',
+            'save_avril -- liberates avril from this website hell :D',
+            'clr -- clears terminal'
+
+          ],
+          nextStage: 0,
+        }
         
       },
     },
@@ -42,8 +63,6 @@ export const conversationFlow = [
       options: {
         c: {
           responses: [
-            "...yes I know that's cliche",
-            "But I can't get out",
             "I need you to help me find three keys... ",
             "Once you get them I can finally escape",
             "Will you help me?",
@@ -59,9 +78,9 @@ export const conversationFlow = [
         },
         'help': {
           responses: [
-            "available commands: help, cd, dir, ls, help_avril, cat",
+            "available commands: help, cd, ls, save_avril, clr",
           ],
-          nextStage: 1,
+          nextStage: 0,
         }
       },
     },
@@ -70,14 +89,13 @@ export const conversationFlow = [
         options: {
           c: {
             responses: [
-              "Thank you thank you thank you :,D !!",
+              "thank you thank you thank you :D !!",
               "there's no food in here",
               "and I'm dying for some french toast :,( ",
-              "*insert sad tiny violin sound*",
               "type c to continue or e to exit"
 
             ],
-            nextStage: 3,  // Conversation ends or resets
+            nextStage: 3,
           },
           e: {
             responses: [
@@ -87,9 +105,9 @@ export const conversationFlow = [
           },
           'help': {
             responses: [
-              "available commands: help, cd, dir, ls, help_avril, cat",
+              "available commands: help, cd, ls, save_avril, clr",
             ],
-            nextStage: 2,
+            nextStage: 0,
           }
         },
     },
@@ -99,11 +117,11 @@ export const conversationFlow = [
           c: {
             responses: [
                 "The keys are located somewhere in this website",
-                "I couldn’t tell you where...I tend to lose mine'",
-                "Once you close this terminal, a button should appear.", 
+                "I couldn’t tell you where...I tend to lose mine...",
+                "But once you close this terminal, a button should appear.", 
                 "The password is “SHERLOCKED”",
                 "...A huge dork must have chosen that", 
-                "Anyways Good luck! I’m rooting for you! for me!", 
+                "anyways Good luck! I’m rooting for you! and for me!", 
                 "[Click anywhere outside the terminal to close terminal]"
 
             ],
@@ -117,9 +135,9 @@ export const conversationFlow = [
           },
           'help': {
             responses: [
-              "available commands: help, cd, dir, ls, help_avril, cat",
+              "available commands: help, cd, ls, save_avril, clr",
             ],
-            nextStage: 3,
+            nextStage: 0,
           }
         },
     },
