@@ -29,9 +29,9 @@
 .banner_line{
     top: 8px;
     left: 0px;
-    background: linear-gradient(90deg, #04baf6, #e314d2, rgb(0, 186, 253), rgb(128, 4, 252)); 
-    background-size: 100% 100%;       
-    padding: 3px 0px 0px 0px;        
+    background: linear-gradient(90deg, #19c0f8, #de74d5, rgb(94, 185, 231), rgb(166, 110, 222)); 
+    background-size: 300% 300%;       
+    padding: 5px 0px 0px 0px;        
     width: 100%;                /* Make the banner full width */
     position: relative; 
     z-index: 1;
