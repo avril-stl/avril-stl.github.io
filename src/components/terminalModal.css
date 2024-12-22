@@ -126,3 +126,10 @@
     font-weight: bold;
     z-index: 1; /* Ensure it's on top of any other header content */
   }
+
+.link-listed {
+
+    color: white;
+    
+
+}

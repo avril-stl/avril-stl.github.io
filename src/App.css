@@ -32,8 +32,8 @@ body, html {
   background-clip: text;
   color: transparent;
   font-size: 70px;
-  margin: 0;  /* Remove default margins */
-  padding: 0; /* Remove default padding */
+  margin: 0px;  /* Remove default margins */
+  padding: 0px; /* Remove default padding */
   display: flex;  /* Allow the text to scroll horizontally */
   white-space: normal;    /* Prevent text from wrapping to the next line */
   text-align: center; 
@@ -53,17 +53,10 @@ body, html {
   font-weight: lighter;
 }
 
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 
 .App-header {
   background-color: #0a1835;
