@@ -4,7 +4,7 @@ import './App.css';
 import RollingSongBanner from './components/RollingSongBanner';
 import Navbar from './components/navbar';
 import TerminalModal from './components/terminalModal';
-import Geneva from './pages/Geneva';  // Import the About component
+// import Geneva from './pages/Geneva';  // Import the About component
 import FirstDoor from './pages/FirstDoor';  // Import the About component
 
 const App = () => {
