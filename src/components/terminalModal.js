@@ -122,11 +122,11 @@ const TerminalModal = ({ isOpen, onClose }) => {
 
   return (
     isOpen && (
-      <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-overlay" >
         <div className="modal-container" onClick={(e) => e.stopPropagation()}>
           <div className="terminal-header">
-            <div className="header-text"> 📁 faketerminal — - zsh</div>
-            <button className="close-button" onClick={onClose}>X</button>
+            <div className="header-text"> schmerminal — - zsh</div>
+            <button className="close-button" onClick={onClose}>x</button>
           </div>
           <div className="terminal-body">
             <div className="terminal-output" ref={terminalRef}>

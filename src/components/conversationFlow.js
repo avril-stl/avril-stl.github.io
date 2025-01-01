@@ -8,7 +8,14 @@ export const conversationFlow = [
       options: {
         'help': {
           responses: [
-            "available commands: help, cd, ls, save_avril, clr, terminal-how-to",
+            "available commands:",
+            "> terminal_how_to",
+            "> help", 
+            "> cd", 
+            "> ls", 
+            "> clr",
+            "> save_avril",  
+            "> boring_old_about_page"
           ],
           nextStage: 0,
         },
@@ -42,7 +49,7 @@ export const conversationFlow = [
             'ZHJlYW0gYSBsaXR0bGUgZHJlYW0gb2YgbWU=',
             'TGEgUml0b3VybmVsbGUgYnkgU2ViYXN0aWVuIFRlbGxpZXIg',
 
-            'oh no! something happened to the songs!',
+            'oh no! it looks like some of the songs are encoded!',
             'Type c to continue or e to exit: '
           ],
           nextStage: 4,
@@ -61,7 +68,7 @@ export const conversationFlow = [
           ],
           nextStage: 0,
         },
-        'terminal-how-to': {
+        'terminal_how_to': {
           responses: [
             'help -- lists all available commands',
             'cd -- puts you in a new directory',
@@ -163,10 +170,8 @@ export const conversationFlow = [
       options: {
         c: {
           responses: [
-              '...it looks like the titles are encrypted somehow...',
-              '...but I think I saw a decryptor around here somewhere...',
-              'you should go find it!',
-              "[Click anywhere outside the terminal to close terminal]"
+              'huh, looks base 64...',
+              'whats that handy command? echo -n ... | base 64? '
 
           ],
           nextStage: 0,  // Conversation ends or resets
