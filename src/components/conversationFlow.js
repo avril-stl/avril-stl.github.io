@@ -14,8 +14,8 @@ export const conversationFlow = [
             "> cd", 
             "> ls", 
             "> clr",
-            "> save_avril",  
-            "> boring_old_about_page"
+            "> echo", 
+            "> save_avril"
           ],
           nextStage: 0,
         },
@@ -46,10 +46,14 @@ export const conversationFlow = [
         },
         'cd favorite_songs': {
           responses: [
-            'ZHJlYW0gYSBsaXR0bGUgZHJlYW0gb2YgbWU=',
-            'TGEgUml0b3VybmVsbGUgYnkgU2ViYXN0aWVuIFRlbGxpZXIg',
+            'I Live - Jason Faulkner',
+            'Underground - Ben Folds Five',
+            'I Just Want To Be Your Friend - The Millenium Band',
+            'RWFybHkgVG8gVGhlIFBhcnR5IC0gQW5keSBTaGF1ZiA=',
+            'Must Do Something About it - Wings', 
+            'Lithium - Nirvana', 
 
-            'oh no! it looks like some of the songs are encoded!',
+            'Oh No! it looks like one of the songs is base 64 encoded!',
             'Type c to continue or e to exit: '
           ],
           nextStage: 4,
@@ -62,19 +66,16 @@ export const conversationFlow = [
           ],
           nextStage: 0,
         },
-        'cd boring_old_about_page': {
-          responses: [
-            'LOCKED! Find the key that unlocks this page :)'
-          ],
-          nextStage: 0,
-        },
+        
         'terminal_how_to': {
           responses: [
             'help -- lists all available commands',
             'cd -- puts you in a new directory',
             'ls -- lists all the items in a directory',
             'save_avril -- liberates avril from this website hell :D',
-            'clr -- clears terminal'
+            'clr -- clears terminal',
+            'echo -- echos what you said back',
+            'echo -n ... | base 64 -- base64 encodes a string'
 
           ],
           nextStage: 0,

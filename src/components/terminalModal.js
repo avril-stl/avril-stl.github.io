@@ -19,6 +19,9 @@ const TerminalModal = ({ isOpen, onClose }) => {
     }
   };
 
+
+  
+
   useEffect(() => {
     scrollToBottom();  // Auto-scroll when output changes
   }, [output]);
@@ -63,12 +66,14 @@ const TerminalModal = ({ isOpen, onClose }) => {
       });
     }
 
+    const trimmedCommand = command.trim().toLowerCase()
+
     // Handle known commands
-    if (command.trim().toLowerCase() === 'clr') {
+    if (trimmedCommand  === 'clr') {
       setOutput([{ text: '', isInput: false }]);  // Reset terminal output
       setStage(0);
       setDoor('CLOSED');
-    } else if (command.trim().toLowerCase() in currentStage.options) {
+    } else if (trimmedCommand in currentStage.options) {
       const { responses, nextStage } = currentStage.options[command.trim().toLowerCase()];
       setOutput((prevOutput) => [
         ...prevOutput,
@@ -76,6 +81,39 @@ const TerminalModal = ({ isOpen, onClose }) => {
         ...responses.map((response) => ({ text: response, isInput: false })),
       ]);
       setStage(nextStage);  // Move to the next stage
+    } else if (trimmedCommand.startsWith('echo -n')) {
+      const tc = command.trim()
+      let newcom = tc.replace(/^echo -n\s*/, '')
+
+      if (newcom.endsWith('|base64') || newcom.endsWith('| base64')){
+        newcom = newcom.replace(/\| ?base64$/, '')
+        setOutput((prevOutput) => [
+          ...prevOutput,
+          { text: `(base) charming_knight@Avrils-Website ~ % ${command}`, isInput: true },
+          { text: `${btoa(newcom)}`, isInput: false },
+        ]); 
+      }else if (newcom.endsWith('| base64 -d') || newcom.endsWith('|base64 -d')){
+        newcom = newcom.replace(/\| ?base64 -d$/, '')
+        try{
+          setOutput((prevOutput) => [
+            ...prevOutput,
+            { text: `(base) charming_knight@Avrils-Website ~ % ${command}`, isInput: true },
+            { text: `${atob((newcom))}`, isInput: false },
+          ]); 
+        }catch (e) {
+          setOutput((prevOutput) => [
+            ...prevOutput,
+            { text: `(base) charming_knight@Avrils-Website ~ % ${command}`, isInput: true },
+            { text: `this text is already decoded: ${(newcom)}`, isInput: false },
+          ]); 
+        }
+      }else{
+        setOutput((prevOutput) => [
+          ...prevOutput,
+          { text: `(base) charming_knight@Avrils-Website ~ % ${command}`, isInput: true },
+          { text: `${newcom}`, isInput: false },
+        ]);
+      }
     } else {
       setOutput((prevOutput) => [
         ...prevOutput,

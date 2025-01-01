@@ -8,7 +8,7 @@ const PasswordModal = ({ isOpen, onClose, onPasswordCorrect }) => {
   const [errorMessage, setErrorMessage] = useState('');
   const [showHint, setShowHint] = useState(false);
 
-  const correctPassword = 'opendoor'; // Set the correct password
+  const correctPassword = 'early to the party'; // Set the correct password
 
   const phrases = ["Aw, Phooey.", "Rats!", "Diggity Darnit!", "Sheesh!", "Womp Womp.", "Youch!"]
 
@@ -22,7 +22,7 @@ const PasswordModal = ({ isOpen, onClose, onPasswordCorrect }) => {
   };
 
   // Handle password input change
-  const handlePasswordChange = (e) => setPassword(e.target.value);
+  const handlePasswordChange = (e) => setPassword(e.target.value.toLowerCase());
 
   // Handle form submission
   const handleSubmit = () => {
