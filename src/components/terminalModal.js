@@ -81,9 +81,9 @@ const TerminalModal = ({ isOpen, onClose }) => {
         ...responses.map((response) => ({ text: response, isInput: false })),
       ]);
       setStage(nextStage);  // Move to the next stage
-    } else if (trimmedCommand.startsWith('echo -n')) {
+    } else if (trimmedCommand.startsWith('echo')) {
       const tc = command.trim()
-      let newcom = tc.replace(/^echo -n\s*/, '')
+      let newcom = tc.replace(/^echo\s*/, '')
 
       if (newcom.endsWith('|base64') || newcom.endsWith('| base64')){
         newcom = newcom.replace(/\| ?base64$/, '')

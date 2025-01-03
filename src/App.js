@@ -6,6 +6,7 @@ import TerminalModal from './components/terminalModal'; // Existing terminal mod
 import PasswordModal from './components/passwordModal'; // New password modal for door
 import FirstDoor from './pages/FirstDoor';  // Import the About component
 import Bedroom from './pages/Bedroom';
+import PhaserGame from './games/constellation_path'
 
 const App = () => {
   // State for terminal modal
@@ -71,7 +72,7 @@ const App = () => {
                       alt="door"
                       style={{
                         position: 'relative',  // Position relative to the parent div
-                        top: '0px',  // Y-coordinate for the door icon
+                        bottom: '0px',  // Y-coordinate for the door icon
                         left: '0px', // X-coordinate for the door icon
                         width: '400px', // Set size of the object
                         height: '400px',
@@ -88,6 +89,8 @@ const App = () => {
           {/* Other Routes */}
           <Route path="/door_one" element={<FirstDoor />} />
           <Route path="/bedroom" element={<Bedroom />} />
+          <Route path="/star_song" element={<PhaserGame />} />
+
         </Routes>
 
         {/* Terminal Modal (Fake terminal) */}

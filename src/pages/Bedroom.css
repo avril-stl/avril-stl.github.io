@@ -1,0 +1,9 @@
+.Bedroom {
+    position: relative;
+    margin: 0;                /* Remove default margins */
+    padding: 0;               /* Remove default padding */
+    height: 100vh;             /* Ensure both html and body take full height */
+    min-width: 100vw;              /* Ensure full width */
+    width: 100%;
+    background-color: rgb(182, 175, 188); /* Set the background color */
+}
